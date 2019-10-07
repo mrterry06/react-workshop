@@ -1,13 +1,13 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "react-workshop",
   "version": "1.0.0",
-  "description": "A minimal react-redux boilerplate with all the best practices",
+  "description": "react redux workshop",
   "repository": {
     "type": "git",
-    "url": "git://github.com/flexdinesh/react-redux-boilerplate.git"
+    "url": "git://github.com/mrterry06/react-workshop.git"
   },
   "license": "MIT",
-  "author": "Dinesh Pandiyan",
+  "author": "Scott Terry",
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
