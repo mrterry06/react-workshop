@@ -3,16 +3,20 @@ import './style.scss';
 import InputField from 'components/InputField';
 import createUser from '../../utils/createUser';
 
-function CreateUserForm(props) {
+function CreateUserForm(_props) {
   let [email, setEmail] = React.useState('');
   let [first, setFirst] = React.useState('');
   let [last, setLast] = React.useState('');
 
   return (
     <form
-      onSubmit={e => {
+      onSubmit={async e => {
         e.preventDefault();
-        createUser(`${first} ${last}`, email);
+        try {
+          const response = await createUser(`${first} ${last}`, email);
+        } catch (e) {
+          alert(e.message);
+        }
       }}
     >
       <InputField name="firstName" onChange={setFirst} value={first} />

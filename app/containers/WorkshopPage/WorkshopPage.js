@@ -18,18 +18,38 @@ export default class WorkshopPage extends React.Component {
         <Helmet>
           <title>Workshop Page</title>
         </Helmet>
-        <p>What you will be doing:</p>
-        <ul>
-          <li>Make an InputField component(this is already done)</li>
+        <h3>What you will be doing:</h3>
+        <p>
+          You will be making a form to create a new user. There are tests to
+          guide you throught the acceptance criteria. Use them to guide what you
+          write. Run <code>npm run test:watch</code> in your terminal to run the
+          tests.
+        </p>
+
+        <ol>
           <li>
-            Refactor the workshop page with your component and generate 3 fields
-            (First Name, Last Name, and Email)
+            Edit the <code>InputField</code> component to take{' '}
+            <code>name, label, onChange, and value</code> props
           </li>
-          <li>Add a submit button that submits the form</li>
-          <li>Add validations and limit user input</li>
-          <li>Watch test succeed</li>
-        </ul>
+          <li>
+            Edit the <code>CreateUserForm</code> component to use the{' '}
+            <code>InputField</code> component. Generate 3 inputs:
+            <ol>
+              <li>First Name</li>
+              <li>Last Name</li>
+              <li>Email</li>
+            </ol>
+          </li>
+          <li>
+            Add a <code>submit</code> button to <code>CreateUserForm</code> that
+            submits the form. Call the <code>createUser</code> function located
+            in <code>utils/createUser</code> in your submit and handle the
+            promise it returns accordingly
+          </li>
+          <li>Bonus: Add validations! I'll give you twizzlers</li>
+        </ol>
         <hr />
+
         <CreateUserForm />
       </div>
     );
