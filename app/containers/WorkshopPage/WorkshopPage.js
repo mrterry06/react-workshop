@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import CreateUserForm from 'components/CreateUserForm';
 import './style.scss';
 
 export default class WorkshopPage extends React.Component {
@@ -17,33 +18,19 @@ export default class WorkshopPage extends React.Component {
         <Helmet>
           <title>Workshop Page</title>
         </Helmet>
-        <p>
-          What you will be doing:
-        </p>
+        <p>What you will be doing:</p>
         <ul>
           <li>Make an InputField component(this is already done)</li>
-          <li>Refactor the workshop page with your component and generate 3 fields (First Name, Last Name, and Email)</li>
+          <li>
+            Refactor the workshop page with your component and generate 3 fields
+            (First Name, Last Name, and Email)
+          </li>
           <li>Add a submit button that submits the form</li>
           <li>Add validations and limit user input</li>
           <li>Watch test succeed</li>
         </ul>
         <hr />
-        <form name="workshopForm">
-          <label>
-            First Name
-            <input
-              name="firstname"
-              id="firstname"
-            />
-          </label>
-          <label>
-            Last Name
-            <input
-              name="lastname"
-              id="lastname"
-            />
-          </label>
-        </form>
+        <CreateUserForm />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-xdescribe('x out', () => {
+describe('x out', () => {
   it('should render its heading', () => {
     expect(true).toBe(true);
   });
