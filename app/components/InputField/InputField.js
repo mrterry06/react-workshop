@@ -8,7 +8,7 @@ function InputField(props) {
       <input
         type="text"
         placeholder={`${props.name}...`}
-        onChange={e => props.onChange(e.target.value)}
+        onChange={e => props.onChange(props.name, e.target.value)}
         value={props.value}
       />
     </label>

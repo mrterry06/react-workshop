@@ -45,16 +45,6 @@ describe('InputField', () => {
       expect(input.prop('placeholder')).toBeTruthy();
     });
 
-    it('should set input value via a value prop', () => {
-      const expectedValue = 'ji.wang@grainger.com';
-
-      const wrapper = shallow(<InputField value={expectedValue} />);
-
-      const input = wrapper.find('input').first();
-
-      expect(input.prop('value')).toEqual(expectedValue);
-    });
-
     it("should call it's onChange prop when the input value changes", () => {
       const expectedValue = 'ji.wang@grainger.com';
 
@@ -69,7 +59,7 @@ describe('InputField', () => {
       expect(
         !Object.keys(onChangeSpy.mock.calls[0][0]).includes('target'),
       ).toBeTruthy();
-      expect(onChangeSpy).toHaveBeenCalledWith(expectedValue);
+      expect(onChangeSpy).toHaveBeenCalledWith('email', expectedValue);
     });
   });
 });
